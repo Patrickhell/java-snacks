@@ -1,5 +1,7 @@
 package org.java.snack;
 
+import java.util.Random;
+
 public class SumOfNumbersWithOddIndex {
 
 public static void main(String[] args) {
@@ -7,22 +9,28 @@ public static void main(String[] args) {
 		//Crea un array di numeri interi e fai la somma
 		//di tutti gli elementi  che sono in posizione dispari
 		
-		int[] IntegerNumbersList = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+	    Random rnd = new Random();
+	
+		final int lengthOfIntegerList = 10;
+		
+		int[] arrInteger = new int[lengthOfIntegerList];
+		
+		for (int x = 0; x < lengthOfIntegerList; x++) {	
+			
+			arrInteger[x] = rnd.nextInt(10);	
+		}
 		
 		int sum = 0;
 		
-		System.out.println("Sum of all number in odd position is: ");
-		
-		for(int i = 0; i < IntegerNumbersList.length; i++) {
+		for (int x = 1; x <lengthOfIntegerList; x += 2) {
 			
-			if(i % 2 != 0) {
-				
-				sum += IntegerNumbersList[i];
-				
-				System.out.println(sum);
-			}
-		}
+			System.out.println("[" + x + "] " + arrInteger[x]);
+			
+			sum += arrInteger[x];
+			
+		}	
 		
-}
+		System.out.println("sum: " + sum);
+       }
 
 }
