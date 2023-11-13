@@ -16,7 +16,7 @@ public class MaxMinMedValueOfCasualNumbersOfArray {
 	        	
 	        	for(int i = 0; i < 10; i++) {
 	        	        	
-	        		arrayOfRandomValue[i] = rnd.nextInt(100, 150);
+	        		arrayOfRandomValue[i] = rnd.nextInt(0, 100);
 	        	}
 	        	
 	        	System.out.println("Array of random value: " + Arrays.toString(arrayOfRandomValue));
