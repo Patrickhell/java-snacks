@@ -18,20 +18,20 @@ public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("insert a word: ");
-		String word = sc.nextLine().toLowerCase();
+		System.out.print("insert a number: ");
+		String number = sc.nextLine().toLowerCase();
 		
 		int insertedWord = 0;
 		
-		for (int i = 0; i < word.length(); i++) {
+		for (int i = 0; i < number.length(); i++) {
 			
-			char c = word.charAt(i);
+			char c = number.charAt(i);
 			
 			int valueOfc = (int) c - (int) '0';
 			
 			insertedWord = insertedWord * 10 + valueOfc;
 		}
-		System.out.println("The convertion from String to Integer is: " + insertedWord);
+		System.out.println("The convertion from String number to Integer is: " + insertedWord);
 	}
 
 }
